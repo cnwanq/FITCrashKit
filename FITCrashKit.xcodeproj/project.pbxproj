@@ -19,6 +19,9 @@
 		B783C82021B91B60002C1163 /* TableSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C81F21B91B60002C1163 /* TableSectionItem.m */; };
 		B783C82321B91B6C002C1163 /* TableRowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C82221B91B6C002C1163 /* TableRowItem.m */; };
 		B783C82621B92FA1002C1163 /* ExceptionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C82521B92FA1002C1163 /* ExceptionFactory.m */; };
+		B783C83621BA4EF5002C1163 /* FITCrashStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C83521BA4EF4002C1163 /* FITCrashStore.m */; };
+		B783C83921BA5258002C1163 /* FITCrashReport.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C83821BA5258002C1163 /* FITCrashReport.m */; };
+		B783C83C21BA5E1F002C1163 /* FITDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C83B21BA5E1F002C1163 /* FITDeviceInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,12 @@
 		B783C82221B91B6C002C1163 /* TableRowItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableRowItem.m; sourceTree = "<group>"; };
 		B783C82421B92FA1002C1163 /* ExceptionFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionFactory.h; sourceTree = "<group>"; };
 		B783C82521B92FA1002C1163 /* ExceptionFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExceptionFactory.m; sourceTree = "<group>"; };
+		B783C83421BA4EF4002C1163 /* FITCrashStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITCrashStore.h; sourceTree = "<group>"; };
+		B783C83521BA4EF4002C1163 /* FITCrashStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITCrashStore.m; sourceTree = "<group>"; };
+		B783C83721BA5258002C1163 /* FITCrashReport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITCrashReport.h; sourceTree = "<group>"; };
+		B783C83821BA5258002C1163 /* FITCrashReport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITCrashReport.m; sourceTree = "<group>"; };
+		B783C83A21BA5E1F002C1163 /* FITDeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITDeviceInfo.h; sourceTree = "<group>"; };
+		B783C83B21BA5E1F002C1163 /* FITDeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITDeviceInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,13 +125,13 @@
 				B783C81A21B918BF002C1163 /* FITCrashKit */,
 				B783C7E821B918B0002C1163 /* AppDelegate.h */,
 				B783C7E921B918B0002C1163 /* AppDelegate.m */,
+				B783C7F721B918B2002C1163 /* main.m */,
 				B783C7EB21B918B0002C1163 /* ViewController.h */,
 				B783C7EC21B918B0002C1163 /* ViewController.m */,
 				B783C7EE21B918B0002C1163 /* Main.storyboard */,
 				B783C7F121B918B2002C1163 /* Assets.xcassets */,
 				B783C7F321B918B2002C1163 /* LaunchScreen.storyboard */,
 				B783C7F621B918B2002C1163 /* Info.plist */,
-				B783C7F721B918B2002C1163 /* main.m */,
 				B783C81E21B91B60002C1163 /* TableSectionItem.h */,
 				B783C81F21B91B60002C1163 /* TableSectionItem.m */,
 				B783C82121B91B6C002C1163 /* TableRowItem.h */,
@@ -156,6 +165,12 @@
 			children = (
 				B783C81B21B918D7002C1163 /* FITCrashKit.h */,
 				B783C81C21B918D7002C1163 /* FITCrashKit.m */,
+				B783C83421BA4EF4002C1163 /* FITCrashStore.h */,
+				B783C83521BA4EF4002C1163 /* FITCrashStore.m */,
+				B783C83721BA5258002C1163 /* FITCrashReport.h */,
+				B783C83821BA5258002C1163 /* FITCrashReport.m */,
+				B783C83A21BA5E1F002C1163 /* FITDeviceInfo.h */,
+				B783C83B21BA5E1F002C1163 /* FITDeviceInfo.m */,
 			);
 			path = FITCrashKit;
 			sourceTree = "<group>";
@@ -291,8 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B783C81D21B918D7002C1163 /* FITCrashKit.m in Sources */,
+				B783C83C21BA5E1F002C1163 /* FITDeviceInfo.m in Sources */,
 				B783C82021B91B60002C1163 /* TableSectionItem.m in Sources */,
 				B783C82321B91B6C002C1163 /* TableRowItem.m in Sources */,
+				B783C83621BA4EF5002C1163 /* FITCrashStore.m in Sources */,
+				B783C83921BA5258002C1163 /* FITCrashReport.m in Sources */,
 				B783C7ED21B918B0002C1163 /* ViewController.m in Sources */,
 				B783C7F821B918B2002C1163 /* main.m in Sources */,
 				B783C7EA21B918B0002C1163 /* AppDelegate.m in Sources */,

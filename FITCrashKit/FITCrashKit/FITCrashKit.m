@@ -21,17 +21,27 @@ static FITCrashKit *_shareInstance = nil;
 }
 
 + (void)enable {
+    NSString *lastErrorInfo = [FITCrashStore lastCrashInfo];
+    if (lastErrorInfo.length) {
+        [FITCrashReport reportCrash:lastErrorInfo];
+        [FITCrashStore clearCrashInfo];
+    }
+    
     // 处理 Exception
     NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
-    
     // 处理 异常信号
     InstallSignalHandler();
-    
+}
+
++ (void)enableWithReportUrl:(NSString *)url {
+    [FITCrashKit shareInstance].reportUrl = url;
+    [FITCrashKit enable];
 }
 
 void UncaughtExceptionHandler(NSException *exception) {
 //    NSLog(@"%@", [exception callStackSymbols]);
     NSString *errorMsg = [[exception callStackSymbols] componentsJoinedByString:@"\n"];
+    [[FITCrashKit shareInstance] handleCrashInfo:errorMsg];
     if ([FITCrashKit shareInstance].handleCrashBlock) {
         [FITCrashKit shareInstance].handleCrashBlock(errorMsg);
     }
@@ -74,10 +84,24 @@ void handleSignalException(int signal) {
     }
     
     NSString *errorMsg = [crashInfo copy];
+    [[FITCrashKit shareInstance] handleCrashInfo:errorMsg];
     if ([FITCrashKit shareInstance].handleCrashBlock) {
         [FITCrashKit shareInstance].handleCrashBlock(errorMsg);
     }
 }
 
+#pragma mark - handle crash info
+
+- (void)handleCrashInfo:(NSString *)info {
+    [FITCrashStore storeCrashInfo:info];
+}
+
+
+#pragma mark - setter
+
+- (void)setReportUrl:(NSString *)reportUrl {
+    _reportUrl = reportUrl;
+    [FITCrashReport shareInstance].reportUrl = reportUrl;
+}
 
 @end

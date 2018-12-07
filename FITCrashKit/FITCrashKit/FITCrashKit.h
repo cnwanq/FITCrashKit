@@ -7,16 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FITCrashStore.h"
+#import "FITCrashReport.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FITCrashKit : NSObject
 
+@property (nonatomic, copy) NSString *reportUrl;
 @property (nonatomic, copy) void (^handleCrashBlock)(NSString *crashInfo);
 
 + (instancetype)shareInstance;
 
 + (void)enable;
++ (void)enableWithReportUrl:(NSString *)url;
 
 
 @end

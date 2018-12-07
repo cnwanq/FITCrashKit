@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [FITCrashKit enable];
+    [FITCrashKit enableWithReportUrl:@"https://hooks.slack.com/services/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"];
     
     return YES;
 }
