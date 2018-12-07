@@ -15,6 +15,10 @@
 		B783C7F821B918B2002C1163 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C7F721B918B2002C1163 /* main.m */; };
 		B783C80221B918B2002C1163 /* FITCrashKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C80121B918B2002C1163 /* FITCrashKitTests.m */; };
 		B783C80D21B918B2002C1163 /* FITCrashKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C80C21B918B2002C1163 /* FITCrashKitUITests.m */; };
+		B783C81D21B918D7002C1163 /* FITCrashKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C81C21B918D7002C1163 /* FITCrashKit.m */; };
+		B783C82021B91B60002C1163 /* TableSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C81F21B91B60002C1163 /* TableSectionItem.m */; };
+		B783C82321B91B6C002C1163 /* TableRowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C82221B91B6C002C1163 /* TableRowItem.m */; };
+		B783C82621B92FA1002C1163 /* ExceptionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B783C82521B92FA1002C1163 /* ExceptionFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		B783C80821B918B2002C1163 /* FITCrashKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FITCrashKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B783C80C21B918B2002C1163 /* FITCrashKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITCrashKitUITests.m; sourceTree = "<group>"; };
 		B783C80E21B918B2002C1163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B783C81B21B918D7002C1163 /* FITCrashKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITCrashKit.h; sourceTree = "<group>"; };
+		B783C81C21B918D7002C1163 /* FITCrashKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITCrashKit.m; sourceTree = "<group>"; };
+		B783C81E21B91B60002C1163 /* TableSectionItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableSectionItem.h; sourceTree = "<group>"; };
+		B783C81F21B91B60002C1163 /* TableSectionItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableSectionItem.m; sourceTree = "<group>"; };
+		B783C82121B91B6C002C1163 /* TableRowItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableRowItem.h; sourceTree = "<group>"; };
+		B783C82221B91B6C002C1163 /* TableRowItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableRowItem.m; sourceTree = "<group>"; };
+		B783C82421B92FA1002C1163 /* ExceptionFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionFactory.h; sourceTree = "<group>"; };
+		B783C82521B92FA1002C1163 /* ExceptionFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExceptionFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		B783C7E721B918B0002C1163 /* FITCrashKit */ = {
 			isa = PBXGroup;
 			children = (
+				B783C81A21B918BF002C1163 /* FITCrashKit */,
 				B783C7E821B918B0002C1163 /* AppDelegate.h */,
 				B783C7E921B918B0002C1163 /* AppDelegate.m */,
 				B783C7EB21B918B0002C1163 /* ViewController.h */,
@@ -110,6 +123,12 @@
 				B783C7F321B918B2002C1163 /* LaunchScreen.storyboard */,
 				B783C7F621B918B2002C1163 /* Info.plist */,
 				B783C7F721B918B2002C1163 /* main.m */,
+				B783C81E21B91B60002C1163 /* TableSectionItem.h */,
+				B783C81F21B91B60002C1163 /* TableSectionItem.m */,
+				B783C82121B91B6C002C1163 /* TableRowItem.h */,
+				B783C82221B91B6C002C1163 /* TableRowItem.m */,
+				B783C82421B92FA1002C1163 /* ExceptionFactory.h */,
+				B783C82521B92FA1002C1163 /* ExceptionFactory.m */,
 			);
 			path = FITCrashKit;
 			sourceTree = "<group>";
@@ -130,6 +149,15 @@
 				B783C80E21B918B2002C1163 /* Info.plist */,
 			);
 			path = FITCrashKitUITests;
+			sourceTree = "<group>";
+		};
+		B783C81A21B918BF002C1163 /* FITCrashKit */ = {
+			isa = PBXGroup;
+			children = (
+				B783C81B21B918D7002C1163 /* FITCrashKit.h */,
+				B783C81C21B918D7002C1163 /* FITCrashKit.m */,
+			);
+			path = FITCrashKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B783C81D21B918D7002C1163 /* FITCrashKit.m in Sources */,
+				B783C82021B91B60002C1163 /* TableSectionItem.m in Sources */,
+				B783C82321B91B6C002C1163 /* TableRowItem.m in Sources */,
 				B783C7ED21B918B0002C1163 /* ViewController.m in Sources */,
 				B783C7F821B918B2002C1163 /* main.m in Sources */,
 				B783C7EA21B918B0002C1163 /* AppDelegate.m in Sources */,
+				B783C82621B92FA1002C1163 /* ExceptionFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2T8K3RPZ5;
 				INFOPLIST_FILE = FITCrashKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2T8K3RPZ5;
 				INFOPLIST_FILE = FITCrashKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

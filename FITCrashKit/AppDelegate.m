@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FITCrashKit/FITCrashKit.h"
+#import "execinfo.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [FITCrashKit enable];
+    
     return YES;
 }
 
@@ -46,6 +51,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end
